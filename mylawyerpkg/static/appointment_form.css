@@ -1,0 +1,65 @@
+.fetch{
+    background-color: #092327;
+}
+.nav-item .lawy{
+    color:#F2F79E;
+}
+.nav-item .bout{
+    color: #F2F79E;
+}
+
+#law{
+    font-size: 35px;
+}
+
+        .but:hover{
+          background-color: #F2F79E ;
+          color: #092327;
+        }
+        .but{
+          color: #f2f79e;
+          background-color: #092327;
+          border:1px solid #F2F79E;
+      }
+    #lw{
+        line-height: 5px;
+        letter-spacing: 10px;
+        color: #2978;
+        font-weight: bold;
+      }
+      .nav-link:hover{
+        color: #097;
+      }
+   
+      .nav-link{
+        color: #092327;
+    }
+      .foot{
+        background-color:  #092327;
+      }
+      a{
+        text-decoration: none;
+      }
+      .bkappoint{
+        background-color: #F2F79E;
+        color: #092327;
+      }
+      .bkappoint:hover{
+        background-color: #092327;
+        color: #F2F79E;
+      }
+      .cont{
+        padding: 1px;
+        margin-right: 5px;
+      }
+      .top{
+        color: #F2F79E;
+        font-weight: bolder;
+      }
+      .write{
+        color: #F2F79E;
+      }
+      .writer{
+        color: #097;
+      }
+      

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="People can register on the platform as members and hire a professional lawyer">
+      <meta name="kewords" content="lawyer, legal, court, case, hire a lawyer, consultation">
+      <meta name="author" content="Olajosh">
+      <meta name="robots" content="index, follow">
+      <title>MY LAWYEr/search-lawyers</title>
+      <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="/static/fontawesome/css/all.css">
+      <link
+      rel="stylesheet"
+      href="/static/https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+      <link rel="stylesheet" href="/static/blog.css">
+</head>
+<body>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md">
+                  <nav class="navbar navbar-expand-lg fetch fixed-top">
+                      <div class="container-fluid">
+                        <h1 class="navbar-brand lw"><i class="fa-solid fa-scale-balanced"></i>  MYLAWYEr</h1>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/"id="groth">Our Lawyers</a>
+                            </li>                                          
+                            <li class="nav-item">
+                              <a class="nav-link" href="/about/" target="_blank" id="groth">About Us</a>
+                            </li>
+                          </ul>                       
+                          <div class="d-flex" role="search">
+                            <a href="/profile/" class="me-3">Hi, {{client_deets.client_fname}}</a>
+                            <a href="/user/login/" class="btn ms-1" >Logout</a>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+              </div>
+          </div>
+</div>
+
+
+<div class="container mt-5 py-5 text-center">
+  <h1>Search for Lawyers</h1>
+  <div class="mb-3">
+      <input
+          type="text"
+          id="searchInput"
+          class="form-control"
+          placeholder="Type a lawyer's name, email, or specialization"
+          oninput="fetchLawyers()"
+      />
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <ul id="resultsList" class="list-group"></ul>
+    </div>
+  </div>
+</div>
+<!-- Add a container for the form -->
+<div class="p-5 " id="formContainer"></div>
+       
+         <!---  footer  -->    
+         <div class="row p-5 today1">
+          <div class="col-md-6">
+            <h6>Connect with a Lawyer</h6>
+            <span>My Lawyer is software application that is designed <br> for all users around the World, used by millions of <br> Lawyers and clients across the globe.</span> <br><br>  
+            <span>built with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-laptop"></i> in Lagos, Nigeria, West Afrcia.</span>
+            <p style="font-weight: lighter;" class="pt-2"><span><a href="https://google.com/">Lincense</a></span>
+              <span><a href="https://google.com/">Terms of Services</a></span>
+              <span><a href="https://google.com/">Privacy Policy</a></span>
+              <span><a href="https://google.com/">Cookies Preferences</a></span>
+              
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="m-2">Contact Us</h6>
+                <p><i class="fa-solid fa-house cont"></i>Magodo Phase 2, Nelson Wike</p>
+                <p><i class="fa-solid fa-phone cont"></i>+2348166378009</p>
+                <p><i class="fa-solid fa-fax cont"></i>+2349029938798</p>
+                <a href="https://www.gmail.com/"><p><i class="fa-solid fa-envelope cont"></i>joshuaollaoluwa@gmail.com</p></a>
+              </div>
+              <div class="col-md-3">
+                <h6>Community</h6>
+               <a href="https://x.com/" target="_blank"> <p>Twitter <i class="fa-brands fa-x-twitter"></i></p></a>
+               <a href="https://web.facebook.com/"><p>facebook <i class="fa-brands fa-facebook-f"></i></p></a> 
+               <a href="https://www.tiktok.com/"><p>Tiktok <i class="fa-brands fa-tiktok"></i></p></a> 
+               <a href="https://www.linkedin.com/"><p>LinkedIn <i class="fa-brands fa-linkedin"></i></p></a> 
+              </div>
+              <div class="col-md-3 p-1">
+                <h6>Help</h6>
+                <p>Support</p>
+                <p>FAQ</p>
+                <p>Newsletter</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background-color:  #062f65; color: #fbfbfb;" class="row">
+          <div class="col">
+            <footer>
+              <p class="text-center mt-2">&copy MY LAWYEr, Inc</p>
+            </footer>
+          </div>
+        </div>
+  
+
+    <script src="/static/jquery.js"></script>
+    <script src="search_lawyers.js"></script>
+     <script>
+
+const searchInput = document.getElementById("searchInput");
+const resultsList = document.getElementById("resultsList");
+const formContainer = document.getElementById("formContainer");
+
+async function fetchLawyers() {
+    const query = searchInput.value.trim();
+
+    try {
+        const response = await fetch(`/search-lawyers?query=${encodeURIComponent(query)}`);
+        const lawyers = await response.json();
+
+        resultsList.innerHTML = ""; // Clear previous results
+
+        if (lawyers.length > 0) {
+            lawyers.forEach(lawyer => {
+                const listItem = document.createElement("li");
+                listItem.classList.add("list-group-item");
+                listItem.innerHTML = `
+                    <h5>${lawyer.name}</h5>
+                    <img src="/static/images/${lawyer.picture}" alt="Profile Picture" style="width:100px; height:auto;"/>
+                    <p>Email: ${lawyer.email}</p>
+                    <p>Phone: ${lawyer.phone}</p>
+                    <p>Specialization: ${lawyer.specialization}</p>
+                    <p>State: ${lawyer.state}</p>
+                    <p>License: ${lawyer.license}</p>
+                    <button class="btn btn-primary select-lawyer-button" data-lawyer='${encodeURIComponent(JSON.stringify(lawyer))}'>Select Lawyer</button>
+                `;
+                resultsList.appendChild(listItem);
+            });
+
+            // Add event listeners to the buttons after rendering
+            const buttons = document.querySelectorAll(".select-lawyer-button");
+            buttons.forEach(button => {
+                button.addEventListener("click", (event) => {
+                    const lawyerData = button.getAttribute("data-lawyer");
+                    displayForm(lawyerData);
+                });
+            });
+        } else {
+            const noResults = document.createElement("li");
+            noResults.classList.add("list-group-item");
+            noResults.textContent = "No lawyers found.";
+            resultsList.appendChild(noResults);
+        }
+    } catch (error) {
+        console.error("Error fetching lawyers:", error);
+    }
+}
+
+function displayForm(lawyerData) {
+    console.log('displayForm triggered');
+    try {
+        const lawyer = JSON.parse(decodeURIComponent(lawyerData));
+        console.log("Displaying form for lawyer:", lawyer);
+
+        formContainer.innerHTML = `
+            <h3>Book Appointment with ${lawyer.name}</h3>
+            <form method="post" action="/book/appointment/" class="form-control" id="lawyerForm">
+                <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                <input type="hidden" name="lawyerId" value="${lawyer.id}">
+                <div class="mb-3">
+                    <label for="clientName" class="form-label">Your Name</label>
+                    <input type="text" id="clientName" name="clientName" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="clientEmail" class="form-label">Your Email</label>
+                    <input type="email" id="clientEmail" name="clientEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="clientPrice" class="form-label">Your Price</label>
+                    <input type="text" id="clientPrice" name="clientPrice" class="form-control" placeholder="Enter your price" required>
+                </div>
+                <div class="mb-3">
+                    <label for="appointmentDate" class="form-label">Appointment Date</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        `;
+    } catch (error) {
+        console.error("Error displaying form:", error);
+    }
+}
+
+// Fetch lawyer list when the user types in the search box
+searchInput.addEventListener('input', fetchLawyers);
+
+
+     </script>
+
+
+
+
+</body>

@@ -1,0 +1,17 @@
+.img-thumbnail{
+    margin-left: 90px;
+}
+.btn{
+    margin-left: 170px;
+}
+#lw{
+    line-height: 5px;
+    letter-spacing: 7px;
+    color: #99272D;
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .fetch{
+    background-color: #fbfbfb;
+}

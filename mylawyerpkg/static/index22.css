@@ -1,0 +1,58 @@
+.row{
+    background-image: url('images/3.jpg');
+    background-attachment:local;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 780px;
+    
+}
+#lw{
+    line-height: 5px;
+    letter-spacing: 10px;
+    color:#011232;
+    font-weight: bold;
+  }
+
+  .fa-house, .fa-user{
+    color: white;
+  }
+  .fa-house{
+    margin-top: 630px;
+    margin-left: 550px;
+    padding: 7px;
+  }
+
+  @media screen and (max-width: 915px) and (min-width: 414px) { 
+    .row{
+        background-image: url('images/3.jpg');
+        background-attachment:local;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        height: 100%;
+        
+    }
+    #lw{
+        line-height: 5px;
+        letter-spacing: 10px;
+        color: #2978;
+        font-weight: bold;
+      }
+    
+      .fa-house, .fa-user{
+        color: white;
+      }
+      .fa-house{
+        margin-top: 630px;
+        margin-left: 350px;
+        padding: 7px;
+      }
+    
+    }
+
+    
+
+ 

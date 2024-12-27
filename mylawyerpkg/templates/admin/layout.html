@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="People can register on the platform as members and hire a professional lawyer">
+		<meta name="kewords" content="lawyer, legal, court, case, hire a lawyer, consultation">
+		<meta name="author" content="Olajosh">
+		<meta name="robots" content="index, follow">
+    <title>MY LAWYEr/Admin</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/fontawesome/css/all.css">
+    <link
+    rel="stylesheet"
+    href="/static/https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="/static/blog.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <nav class="navbar navbar-expand-lg fetch fixed-top">
+                    <div class="container-fluid">
+                      <h1 class="navbar-brand lw"><i class="fa-solid fa-scale-balanced"></i>  MYLAWYEr</h1>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link" href="/"id="groth">Our Lawyers</a>
+                          </li>                                          
+                          <li class="nav-item">
+                            <a class="nav-link" href="/about/" target="_blank" id="groth">About Us</a>
+                          </li>
+                        </ul>                       
+                      
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+            <div class="row my-4 p-5">
+                <div class="col-md">
+                    <header class="header">
+                        <h1 class="text-center text-info bg-danger p-2">Admin Dashboard</h1>
+                    </header>
+                    <main class="container">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                        <div class="flash-messages">
+                            {% for category, message in messages %}
+                            <div class="alert {{ category }}">{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        {% endwith %}
+                        {% block content %}{% endblock %}
+                    </main>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container-fluid">
+            <div class="row p-5 today1">
+                <div class="col-md-6">
+                  <h6>Connect with a Lawyer</h6>
+                  <span>My Lawyer is software application that is designed <br> for all users around the World, used by millions of <br> Lawyers and clients across the globe.</span> <br><br>  
+                  <span>built with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-laptop"></i> in Lagos, Nigeria, West Afrcia.</span>
+                  <p style="font-weight: lighter;" class="pt-2"><span><a href="https://google.com/">Lincense</a></span>
+                    <span><a href="https://google.com/">Terms of Services</a></span>
+                    <span><a href="https://google.com/">Privacy Policy</a></span>
+                    <span><a href="https://google.com/">Cookies Preferences</a></span>
+                    
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6 class="m-2">Contact Us</h6>
+                      <p><i class="fa-solid fa-house cont"></i>Magodo Phase 2, Nelson Wike</p>
+                      <p><i class="fa-solid fa-phone cont"></i>+2348166378009</p>
+                      <p><i class="fa-solid fa-fax cont"></i>+2349029938798</p>
+                      <a href="https://www.gmail.com/"><p><i class="fa-solid fa-envelope cont"></i>joshuaollaoluwa@gmail.com</p></a>
+                    </div>
+                    <div class="col-md-3">
+                      <h6>Community</h6>
+                     <a href="https://x.com/" target="_blank"> <p>Twitter <i class="fa-brands fa-x-twitter"></i></p></a>
+                     <a href="https://web.facebook.com/"><p>facebook <i class="fa-brands fa-facebook-f"></i></p></a> 
+                     <a href="https://www.tiktok.com/"><p>Tiktok <i class="fa-brands fa-tiktok"></i></p></a> 
+                     <a href="https://www.linkedin.com/"><p>LinkedIn <i class="fa-brands fa-linkedin"></i></p></a> 
+                    </div>
+                    <div class="col-md-3 p-1">
+                      <h6>Help</h6>
+                      <p>Support</p>
+                      <p>FAQ</p>
+                      <p>Newsletter</p>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="background-color:  #062f65; color: #fbfbfb;" class="row">
+                <div class="col">
+                  <footer>
+                    <p class="text-center mt-2">&copy MY LAWYEr, Inc</p>
+                  </footer>
+                </div>
+              </div>
+        </div>
+    
+</body>
+</html>

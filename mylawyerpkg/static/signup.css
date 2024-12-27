@@ -1,0 +1,33 @@
+
+ .fetch{
+    background-color:#062f65;
+  }
+ .sclin{
+  color: #062f65;
+ }
+#lw{
+  line-height: 5px;
+  letter-spacing: 7px;
+  color: #99272D;
+  font-weight: bold;
+  font-size: 30px;
+}
+.btn{
+  color: #Ffffff;
+  background-color: #1d1c22;
+  border: 1px solid #ffffff;
+  
+}
+.btn:hover{
+  color: #1d1c22;
+  background-color: #ffffff;
+  border: 1px solid #1d1c22;
+}
+    
+    a{
+      text-decoration: none;
+    }
+  .nav-link{
+      color: #fbfbfb;
+    }
+   

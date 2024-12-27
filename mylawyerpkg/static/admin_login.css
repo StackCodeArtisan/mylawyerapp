@@ -1,0 +1,28 @@
+#lw{
+    color: #097;
+    flex-direction:column;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding: 20px;
+}
+.but:hover{
+    background-color: #F2F79E ;
+    color: #092327;
+    border: 1px solid #092327;
+  }
+  .but{
+    color: #f2f79e;
+    background-color: #092327;
+    border:1px solid #F2F79E;
+}
+.bod{
+    background-color: #092327;
+    border-radius: 10px;
+}
+.dob{
+    background-color: #F2F79E;
+    border-radius: 10px;
+}
+.p{
+    margin-left: 190px;
+}

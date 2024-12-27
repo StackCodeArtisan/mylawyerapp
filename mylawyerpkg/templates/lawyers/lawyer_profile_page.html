@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="People can register on the platform as members and hire a professional lawyer">
+  <meta name="kewords" content="lawyer, legal, court, case, hire a lawyer, consultation">
+  <meta name="author" content="Olajosh">
+  <meta name="robots" content="index, follow">
+  <title>My LAWYEr/lawyer/page</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/fontawesome/css/all.css">
+  <link
+  rel="stylesheet"
+  href="/static/https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link rel="stylesheet" href="/static/lawyer_profile_page.css">
+</head>
+<body>
+ <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <header>
+            <nav class="navbar navbar-expand-md fixed-top custom-color">
+              <div class="container">
+                <h1 id="lw" class="navbar-brand"><i class="fa-solid fa-scale-balanced"></i> MYLAWYEr</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about/">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/blog/">Our Blog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/profile/">Profile</a>
+                    </li>
+                  </ul>
+                  <div class="d-flex" role="search">
+                    <a href="/profile/" class="me-3">Hi, {{lawyer_deets.lawyer_fname}}</a>
+                    <a href="/user/login/" class="btn ms-1" >Logout</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </header>
+        </div>
+        </div>
+  </div>
+</div>
+  <div class="container-fluid ms-0 ps-0 mt-5 " id="lawyerProfile">
+    <div class="row ">
+      <div class="col-md-3">
+        <div class="d-flex flex-column flex-shrink-0 p-3 sideline" style="width: 280px;height: 100vh;">
+          <ul class="nav nav-pills flex-column mb-auto ">
+            <li class="nav-item">
+              <a href="/" class="nav-link custom-active" aria-current="page">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="/"></use></svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/lawyer/profile/" class="nav-link text-white custom-active">
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="/lawyer/profile/"></use></svg>
+                My Profile <i class="fa-solid fa-user ms-2"></i>
+              </a>
+            </li>
+          </ul>
+          <hr>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/static/images/man.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+              <strong>{{lawyer_deets.lawyer_fname}}</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow smallbx">
+              <li><a class="dropdown-item pin" href="/settings/">settings <i class="fa-solid fa-gears"></i></a></li>
+              <li><a class="dropdown-item pin" href="/user/profile/">profile <i class="fa-solid fa-user"></i></a></li>
+              <li><hr class="dropdown-divider pin"></li>
+              <li><a class="dropdown-item pin" href="/user/logout/">sign out <i class="fa-solid fa-right-from-bracket"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+          <div class="row">
+                <h3 class="text-center mt-5 mb-3"> Profile Details</h3>
+                    {% set message = get_flashed_messages(with_categories=True) %}
+                    {% if message %}
+                      {% for msg , cat in message %}
+                        {% if cat == 'errormsg' %}
+                          <div class="alert alert-danger ">{{msg}}</div>
+                        {% else %}
+                          <div class="alert alert-success">{{msg}}</div>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+
+                    <div class="row mt">
+                        <div class="col-md-4">
+                          {%  if lawyer_deets.lawyer_profile_picture == None or lawyer_deets.lawyer_profile_picture == '' %}
+                          <img src="/static/images/man.jpg" class="img-fluid img-thumbnail" width="100%" height="225">
+                          {% else %}
+                          <img src="/static/uploads/{{lawyer_deets.lawyer_profile_picture}}" class="img-fluid img-thumbnail" width="100%" height="225">
+                          {% endif %}
+
+                        </div>
+                        <div class="col-md-8">
+                          <div class="infom px-4 pb-2 pt-3">
+                              <h5 class=""><strong>First Name</strong></h5>
+                              <p class="">{{lawyer_deets.lawyer_fname}}</p> 
+                              <h5 class=""><strong>Last Name</strong></h5>                             
+                              <p class="">{{lawyer_deets.lawyer_lname}}</p>
+                              <h5 class=""><strong>Email</strong></p> 
+                              <p>{{lawyer_deets.lawyer_email}}</p>
+                              <h5 class=""><strong>Phone</strong></h5>
+                              <p classs="">{{lawyer_deets.lawyer_phone}}</p>
+                              <h5><strong>Date Registered</strong></h5> 
+                              <sp>{{lawyer_deets.lawyer_date_registered}}</p>
+                              <h5 class=""><strong>Gender</strong></p>
+                              <p class="">{{lawyer_deets.lawyer_gender}}</p>
+                              <h5><strong>State</strong></h5>
+                              <p>{{lawyer_deets.lawyer_state}}</p>
+                              <h5><strong>Specialization</strong></h5>
+                              <p>{{lawyer_deets.lawyer_specialization}}</p>
+                              <h5><strong>Practice Year</strong></h5>
+                              <p>{{lawyer_deets.lawyer_practice_year}}</p>
+                              <h5><strong>License Number</strong></h5>
+                              <p>{{lawyer_deets.lawyer_license }}</p>
+                              <h5><strong>Price Ranger Per/hr</strong></h5>
+                              <p>{{lawyer_deets.lawyer_price_range_per_hour}}</p>
+                          </div>
+                      </div>
+
+                    </div>
+                    <div class="row p-5">
+                        <div class="col-md-12 p-5">
+                            <h3 class="col-mt-4">Update your Profile</h3>
+                            <summary class="sum">
+                              <details>
+                                <form action="/profile/{{lawyer_deets.lawyer_id}}/update/" method="post" class="mt-3" enctype="multipart/form-data">
+                                <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+                                <div class="mb-2">
+                                    <label for="">Lawyer First Name</label> <br>
+                                    <input type="text" name="lawyer_fname" value="{{ lawyer_deets.lawyer_fname }}"  placeholder="Lawyer First Name" class="form-control" required>
+                                </div>
+                                <div class="mb-2">
+                                  <label for="">Lawyer Last Name</label> <br>
+                                  <input type="text" name="lawyer_lname" value="{{ lawyer_deets.lawyer_lname }}"  placeholder="Lawyer Last Name" class="form-control">
+                              </div>
+                                <div class="mb-2">
+                                    <label for="">Lawyer Email</label> <br>
+                                    <input type="text" name="lawyer_email" value="{{ lawyer_deets.lawyer_email }}" placeholder="lawyer Email" class="form-control">
+                                </div>
+                                <div class="mb-2">
+                                  <label for="">Lawyer Phone</label> <br>
+                                  <input type="text" name="lawyer_phone" value="{{ lawyer_deets.lawyer_phone }}"  placeholder="Lawyer Phone" class="form-control">
+                              </div>
+                              <div class="mb-2">
+                                <label for="">Date Registered</label> <br>
+                                <input type="date" name="lawyer_date_registered" value="{{ lawyer_deets.lawyer_date_registered }}" placeholder="Date Registered" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                              <label for="">Practice Year</label> <br>
+                              <input type="text" name="lawyer_practice_year" value="{{ lawyer_deets.lawyer_practice_year }}" placeholder="Practice Year" class="form-control">
+                          </div>
+                                <div class="mb-2">
+                                  <label for="">Lawyer Gender</label> <br>
+                                  <select name="lawyer_gender"   class="form-select" >
+                                    <option selected>Choose...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                  </select>
+                              </div>
+                                <div class="mb-2">
+                                  <label for="state">State:</label><br>
+                                  <select name="state" id="state" class="form-select">
+                                    {% for state in states %}
+                                      <option value="{{ state.id }}" {% if lawyer_deets.state.id == lform.lawyer_state.data %}selected{% endif %}>
+                                        {{ state.state_name }}
+                                      </option>
+                                    {% endfor %}
+                                  </select>
+                                </div>
+                                <div class="mb-2">
+                                  <label for="lga">lga</label><br>
+                                    <select name="lga" id="lga" class="form-select">
+                                      Select State
+                                    </select>
+                                </div>
+                                <div class="md-2">
+                                    <label for="">Lawyer License</label>
+                                    <input type="text" name="lawyer_license" value="{{ lawyer_deets.lawyer_license }}" id="" class="form-control">
+                                </div>
+                                <div class="md-2">
+                                  <label for="">Profile Picture</label>
+                                  <input type="file" name="lawyer_profile_picture" value="{{ lawyer_deets.lawyer_profile_picture }}" id="" class="form-control">
+                              </div>
+                                <div class="mb-2 mt-2">
+                                  <button class="btn">Update</button>
+                                </div>
+                            </form>
+
+                              </details>
+                            </summary>                          
+                        </div>
+                    </div>
+              </div>
+        </div>
+  </div>
+ 
+  <div class="container-fluid ms-0 ps-0 mt-5">
+    <div class="row">
+      <div class="col-md">
+        <div class="row p-5 today1">
+          <div class="col-md-6">
+            <h6 class="text-dark">Connect with a Lawyer</h6>
+            <span class="text-dark">My Lawyer is software application that is designed <br> for all users around the World, used by millions of <br> Lawyers and clients across the globe.</span> <br><br>  
+            <span class="text-dark">built with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-laptop"></i> in Lagos, Nigeria, West Afrcia.</span>
+            <p style="font-weight: lighter;" class="pt-2"><span><a href="https://google.com/" class="text-dark">Lincense</a></span>
+              <span><a href="https://google.com/" class="text-dark">Terms of Services</a></span>
+              <span><a href="https://google.com/" class="text-dark">Privacy Policy</a></span>
+              <span><a href="https://google.com/" class="text-dark">Cookies Preferences</a></span>
+              
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="m-2 text-dark">Contact Us</h6>
+                <p class="text-dark"><i class="fa-solid fa-house cont"></i>Magodo Phase 2, Nelson Wike</p>
+                <p class="text-dark"><i class="fa-solid fa-phone cont"></i>+2348166378009</p>
+                <p class="text-dark"><i class="fa-solid fa-fax cont"></i>+2349029938798</p>
+                <a href="https://www.gmail.com/"><p class="text-dark"><i class="fa-solid fa-envelope cont"></i>joshuaollaoluwa@gmail.com</p></a>
+              </div>
+              <div class="col-md-3">
+                <h6 class="text-dark">Community</h6>
+               <a href="https://x.com/" target="_blank"> <p class="text-dark">Twitter <i class="fa-brands fa-x-twitter"></i></p></a>
+               <a href="https://web.facebook.com/"><p class="text-dark">facebook <i class="fa-brands fa-facebook-f"></i></p></a> 
+               <a href="https://www.tiktok.com/"><p class="text-dark">Tiktok <i class="fa-brands fa-tiktok"></i></p></a> 
+               <a href="https://www.linkedin.com/"><p class="text-dark">LinkedIn <i class="fa-brands fa-linkedin"></i></p></a> 
+              </div>
+              <div class="col-md-3 p-1">
+                <h6 class="text-dark">Help</h6>
+                <p class="text-dark">Support</p>
+                <p class="text-dark">FAQ</p>
+                <p class="text-dark">Newsletter</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background-color:  #062f65; color: #fbfbfb;" class="row">
+          <div class="col">
+            <footer>
+              <p class="text-center mt-2">&copy MY LAWYEr, Inc</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+   
+ 
+
+ 
+
+  <script src="/static/bootstrap/js/bootstrap.bundle.min.js" ></script>
+  <script>
+   
+
+  </script>
+  
+  </body>
+</html>

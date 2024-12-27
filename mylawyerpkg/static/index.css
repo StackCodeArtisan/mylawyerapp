@@ -1,0 +1,124 @@
+.connect{
+    background-color: #91b0d3;
+}
+.connect h2{
+  color: #ffffff;
+}
+.fetch{
+    background-color: #062f65;
+}
+nav{
+  background-color: #fbfbfb;
+}
+.burst{
+    height:300px;
+        background-image:url("/static/images/images_index_page/images/lady-justice-2388500_1920.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment:fixed;
+        background-size:cover;
+}
+.btn{
+  color: #Ffffff;
+  background-color: #1d1c22;
+  border: 1px solid #ffffff;
+  
+}
+.btn:hover{
+  color: #1d1c22;
+  background-color: #ffffff;
+  border: 1px solid #1d1c22;
+}
+
+.inner{
+        width:100%;
+        height:inherit;
+        background-color:rgba(0,0,0,0.8);
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+}
+.groth{
+color: #fbfbfb;
+}
+.groth1{
+  color: #6b8ba4;
+}
+.groth:hover{
+  color:#6b8ba4;
+}
+.groth1:hover{
+  color: #fbfbfb;
+}
+.nav-link{
+  color: #fbfbfb;
+}
+.nav-link:hover{
+  box-shadow: #91b0d3;
+}
+#law{
+        font-size: 35px;
+    }
+
+.but{
+color: #f2f79e;
+background-color: #092327;
+}
+#key{
+background-color:  #0e79b2;
+}
+#Testimonials{
+color: #f2f79e;
+}
+#popo{
+background-size: 100% 100%;
+box-shadow: 20px 20px 10px gray;
+animation: slider 10s linear infinite;
+}
+@keyframes slider{
+0%{background-image: url(images/1.jpg);}
+30%{background-image: url(images/2.jpg);}
+60%{background-image: url(images/3.jpg);}
+100%{background-image: url(images/4.jpg);}
+}
+
+#lw{
+  line-height: 5px;
+  letter-spacing: 7px;
+  color: #99272D;
+  font-weight: bold;
+  font-size: 30px;
+}
+.fa-scale-balanced{
+  color: #99272D;
+  width: 10px;
+  margin-right: 20px;
+}
+
+.foot{
+  background-color:  #062f65;
+}
+a{
+  text-decoration: none;
+}
+.but:hover{
+  background-color: #F2F79E ;
+  color: #092327;
+}
+.cont{
+  padding: 1px;
+  margin-right: 5px;
+}
+.top{
+  color: #1d1c22;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.write{
+  color: #Ffffff;
+}
+.writer{
+  color: #ffffff;
+}
+

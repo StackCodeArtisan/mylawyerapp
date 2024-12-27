@@ -1,0 +1,162 @@
+#lw{
+  line-height: 5px;
+  letter-spacing: 7px;
+  color: #99272D;
+  font-weight: bold;
+  font-size: 30px;
+}
+.fa-scale-balanced{
+  color: #99272D;
+  width: 10px;
+  margin-right: 20px;
+}
+.fixed-top{
+    background-color: #062f65;
+}
+.nav-link{
+  color: #fbfbfb;
+}
+.nav-link:hover{
+  box-shadow: #91b0d3;
+}
+  a{
+    text-decoration: none;
+  }
+   .btn{
+    color: #Ffffff;
+    background-color: #1d1c22;
+    border: 1px solid #ffffff;
+    
+  }
+  .btn:hover{
+    color: #1d1c22;
+    background-color: #ffffff;
+    border: 1px solid #1d1c22;
+  }
+
+.platform{
+  color: #062f65;
+}
+.cases{
+  color: #011232;
+}
+.real{
+  color: #062f65;
+  background-color: #91b0d3;
+}
+.fa-solid{
+    margin-right: 20px;
+    width: 10px;
+}
+.offcanvas-body{
+    background-color: #011232;
+    color: #fbfbfb;
+}
+.offcanvas-header{
+    background-color: #91b0d3;
+}
+.feature{
+    background-color: #011232;
+    color: #fbfbfb;
+}
+.legal{
+  background-color: #F2F79E;
+}
+.fa-face-laugh-wink, .butt{
+  color: #91b0d3;
+}
+.sideline{
+  background-color: #1d1c22;
+}
+.today{
+  background-color: #011232;
+  color: #fbfbfb;
+}
+.today1{
+  background-color: #fbfbfb;
+  color: #062f65;
+}
+
+.noround{
+  border-radius: 0px;
+}
+
+
+.custom-btn{
+  color:white;
+  background-color: #d21616;
+}
+.custom-btn:hover{
+  color:white;
+  background-color: rgb(95, 47, 12);
+}
+.blue-btn{
+  color:white;
+  background-color: #13357B;
+}
+.blue-btn:hover{
+  color:white;
+  background-color: #031a48;
+}
+.custom-color{
+  background-color:  #13357B;
+} 
+
+a{
+  color:#D64045;
+}
+.custom-active:hover{
+  background-color: #91b0d3 ;
+  color:white;
+  border-radius: 0px;
+}
+.clln{
+  margin-left: 150px;
+}
+.mail{
+  margin-top: 300px;
+}
+.ph{
+  margin-left: 100px;
+}
+.phe{
+  margin-left: 50px;
+}
+.gen{
+  margin-left: 70px;
+}
+.gent{
+  margin-left: 50px;
+}
+.infom{
+  background-color: #91b0d3;
+  border-radius: 5px;
+}
+/* .sum{
+  padding: 20px;
+  list-style: none;
+  cursor: pointer;
+  background-color: #91b0d3;
+  border-radius: 5px;
+  
+} */
+.smallbx{
+  background-color: #91b0d3;
+}
+.pin:hover{
+  background-color: #1d1c22;
+}
+details {
+  margin: 1em 0; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  padding: 10px; 
+  background-color: #f9f9f9; 
+}
+summary {
+  font-weight: bold; 
+  font-size: 1.2em; 
+  cursor: pointer; 
+  margin: 0;
+  list-style: none; 
+}

@@ -1,0 +1,112 @@
+#lw{
+  line-height: 5px;
+  letter-spacing: 7px;
+  color: #99272D;
+  font-weight: bold;
+  font-size: 30px;
+}
+.fa-scale-balanced{
+  color: #99272D;
+  width: 10px;
+  margin-right: 20px;
+}
+.fetch{
+    background-color:  #062f65;
+}
+.logc{
+  color: #062f65;
+}
+.nav-link{
+  color: #fbfbfb;
+}
+.nav-link:hover{
+  box-shadow: #91b0d3;
+}
+  a{
+    text-decoration: none;
+  }
+  .but:hover{
+    background-color: #F2F79E ;
+    color: #092327;
+  }
+  .cont{
+    padding: 1px;
+    margin-right: 5px;
+  }
+
+   .btn{
+    color: #Ffffff;
+    background-color: #1d1c22;
+    border: 1px solid #ffffff;
+    
+  }
+  .btn:hover{
+    color: #1d1c22;
+    background-color: #ffffff;
+    border: 1px solid #1d1c22;
+  }
+
+.platform{
+  color: #062f65;
+}
+.cases{
+  color: #011232;
+}
+.real{
+  color: #062f65;
+  background-color: #91b0d3;
+}
+.fa-certificate{
+    color: #fbfbfb;
+}
+.fa-hand-holding-dollar{
+    color:#fbfbfb;
+}
+.fa-user-group{
+    color: #fbfbfb;
+}
+.fa-user-shield{
+    color: #fbfbfb;
+}
+.fa-star{
+    color: #fbfbfb;
+}
+.fa-toolbox{
+    color:#fbfbfb;
+}
+.fa-solid{
+    margin-right: 20px;
+    width: 10px;
+}
+.offcanvas-body{
+    background-color: #011232;
+    color: #fbfbfb;
+}
+.offcanvas-header{
+    background-color: #91b0d3;
+}
+.feature{
+    background-color: #011232;
+    color: #fbfbfb;
+}
+.legal{
+  background-color: #F2F79E;
+}
+.fa-face-laugh-wink, .butt{
+  color: #91b0d3;
+}
+.today{
+  background-color: #011232;
+  color: #fbfbfb;
+}
+.today1{
+  background-color: #fbfbfb;
+  color: #062f65;
+}
+.copy{
+  background-color: #062f65;
+  color: #fbfbfb;
+}
+.down{
+  background-color: #fbfbfb;
+}

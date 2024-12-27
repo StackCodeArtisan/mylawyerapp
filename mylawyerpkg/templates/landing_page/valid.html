@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>Validation Form</h1>
+
+                <form action="" method="post" novalidate>
+                    {{ form.csrf_token }}
+                <div>
+                    {{ form.username.label }} <br>
+                    {{ form.username(class_='form-control', placeholder='Enter username here') }}
+                    {% if form.username.errors  %}
+                        {% for error in form.username.errors %}
+                            {{error}}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <br>
+                <div>
+                    {{ form.password.label }} <br>
+                    {{ form.password(class_='form-control', placeholder='Enter password here') }}
+                    {% if form.password.errors %}
+                        {% for error in form.password.errors%}
+                            {{error}}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div>
+                    <br>
+                    {{ form.submit(class_='btn btn=primary') }}
+                </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

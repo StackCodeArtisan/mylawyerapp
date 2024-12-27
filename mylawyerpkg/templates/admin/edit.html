@@ -1,0 +1,21 @@
+{% extends "admin/layout.html" %}
+
+{% block content %}
+<section>
+    <h2>Edit {{ entry_type.capitalize() }}</h2>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="{{ entry.name }}" required>
+        
+        {% if entry_type == 'client' %}
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" value="{{ entry.email }}" required>
+        {% elif entry_type == 'lawyer' %}
+        <label for="field">Specialization:</label>
+        <input type="text" name="field" id="field" value="{{ entry.specialization }}" required>
+        {% endif %}
+        
+        <button type="submit">Save Changes</button>
+    </form>
+</section>
+{% endblock %}

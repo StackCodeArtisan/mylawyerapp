@@ -1,0 +1,50 @@
+{% extends "admin/layout.html" %}
+
+{% block content %}
+
+
+<div class="container">
+    <h2 class="text-primary">Appointments</h2>
+    
+    {% if appointments %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Appointment ID</th>
+                <th>Client Name</th>
+                <th>Lawyer Name</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+                <th>Price</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for appointment, client, lawyer in appointments %}
+            <tr>
+                <td>{{ appointment.appointment_id }}</td>
+                <td>{{ client.client_fname }} {{ client.client_lname }}</td> <!-- Client Name -->
+                <td>{{ lawyer.lawyer_fname }} {{ lawyer.lawyer_lname }}</td> <!-- Lawyer Name -->
+                <td>{{ appointment.appointment_date }}</td>
+                <td>{{ appointment.appointment_time }}</td>
+                <td>{{ appointment.appointment_price }}</td>
+                <td>{{ appointment.appointment_note }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No appointments available.</p>
+    {% endif %}
+</div>
+
+<div class="row">
+    <div class="col-md">
+        <a href="/sendmail/" target="_blank" class="btn btn-primary">Send Mail Now</a>
+    </div>
+</div>
+
+
+{% endblock %}
+
+

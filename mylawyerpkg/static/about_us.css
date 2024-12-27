@@ -1,0 +1,103 @@
+
+  a{
+    text-decoration: none;
+  }
+.fetch{
+    background-color: #fbfbfb;
+}
+.nav-link{
+  color: #062f65;
+}
+.burst{
+    height:300px;
+        background-image:url("images/lady-justice-2388500_1920.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment:fixed;
+        background-size:cover;
+}
+.inner{
+        width:100%;
+        height:inherit;
+        background-color:rgba(0,0,0,0.8);
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+}
+
+.who{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    background-color:#91b0d3;
+    color: #fbfbfb;
+}
+.offer{
+  background-color: #062f65;
+}
+.bar3{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.story{
+    background-color: #91b0d3;
+    border: 1px solid #011232;
+    height: 400px;
+    color: #062f65;
+    border-radius: 5px;
+
+}
+.our{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.vsit, .more{
+    text-decoration: none;
+    color: black;
+  }
+   .more:hover{
+    color: #2978a0;
+  }
+  .vsit:hover{
+    color: #2978a0;
+  }
+  .foot{
+    background-color:  #092327;
+  }
+  a{
+    text-decoration: none;
+  }
+   .cont{
+    padding: 1px;
+    margin-right: 5px;
+  }
+  .top{
+    color: #F2F79E;
+    font-weight: bolder;
+  }
+  .write{
+    color: #F2F79E;
+  }
+  .writer{
+    color: #097;
+  }
+.choose{
+  margin-left: 0;
+}
+.cass{
+  margin-left: 100px;
+}
+.why{
+  color: #062f65;
+}
+.card{
+  padding: 40px;
+  background-color: #062f65 ;
+}
+.corevalue{
+  color: #011232;
+}

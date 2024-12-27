@@ -1,0 +1,78 @@
+{% include 'landing_page/header.html' %}
+<!---  content starts from here -->
+        <div class="row">
+            <div class="col-md p-5 text-center connect">
+                {% with messages = get_flashed_messages(with_categories=True, category_filter=['info', 'success']) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category == 'success' %}
+                            <h2 class="alert alert-success">{{ message}}</h2>
+                        {% endif %}
+                        {% if category == 'info' %}
+                        <h2 class="alert alert-info">{{ message}}</h2>
+                    {% endif %}
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <h2 class="mt-5">Find the Right Lawyer for Your Needs, Anytime, Anywhere</h2> 
+                <h4 class="p-2">Connect with experienced legal professionals to help you with your case all from the comfort of your home</h4>                
+            </div>
+        </div>
+            <div id="popo" class="row burst">
+                <div class="col-md inner text-white">
+                    <h2><a href="/user/signup/" class="groth">Get Matched with a Lawyer</a></h2>
+                    
+                </div>
+                <div class="col-md inner text-white">
+                    <h2><a href="/lawyer/signup/" class="groth1">A Lawyer? Join our Professionals</a></h2>
+                </div> 
+            </div>                    
+            <!---  footer  -->    
+           
+            <div class="row p-5 today1">
+                <div class="col-md-6">
+                  <h6>Connect with a Lawyer</h6>
+                  <span>My Lawyer is software application that is designed <br> for all users around the World, used by millions of <br> Lawyers and clients across the globe.</span> <br><br>  
+                  <span>built with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-laptop"></i> in Lagos, Nigeria, West Afrcia.</span>
+                  <p style="font-weight: lighter;" class="pt-2"><span><a href="https://google.com/">Lincense</a></span>
+                    <span><a href="https://google.com/">Terms of Services</a></span>
+                    <span><a href="https://google.com/">Privacy Policy</a></span>
+                    <span><a href="https://google.com/">Cookies Preferences</a></span>
+                    
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6 class="m-2">Contact Us</h6>
+                      <p><i class="fa-solid fa-house cont"></i>Magodo Phase 2, Nelson Wike</p>
+                      <p><i class="fa-solid fa-phone cont"></i>+2348166378009</p>
+                      <p><i class="fa-solid fa-fax cont"></i>+2349029938798</p>
+                      <a href="https://www.gmail.com/"><p><i class="fa-solid fa-envelope cont"></i>joshuaollaoluwa@gmail.com</p></a>
+                    </div>
+                    <div class="col-md-3">
+                      <h6>Community</h6>
+                     <a href="https://x.com/" target="_blank"> <p>Twitter <i class="fa-brands fa-x-twitter"></i></p></a>
+                     <a href="https://web.facebook.com/"><p>facebook <i class="fa-brands fa-facebook-f"></i></p></a> 
+                     <a href="https://www.tiktok.com/"><p>Tiktok <i class="fa-brands fa-tiktok"></i></p></a> 
+                     <a href="https://www.linkedin.com/"><p>LinkedIn <i class="fa-brands fa-linkedin"></i></p></a> 
+                    </div>
+                    <div class="col-md-3 p-1">
+                      <h6>Help</h6>
+                      <p>Support</p>
+                      <p>FAQ</p>
+                      <p>Newsletter</p>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="background-color:  #062f65; color: #fbfbfb;" class="row">
+                <div class="col">
+                  <footer>
+                    <p class="text-center mt-2">&copy MY LAWYEr, Inc</p>
+                  </footer>
+                </div>
+              </div>
+              
+    

@@ -1,0 +1,101 @@
+#lw{
+    line-height: 5px;
+    letter-spacing: 10px;
+    color: #2978;
+    font-weight: bold;
+  }
+  .connect{
+    background-color: #2978a0;
+}
+.fetch{
+    background-color: #092327;
+}
+.nav-link{
+    color: #092327;
+}
+.groth{
+color: #F2F79E;
+}
+#groth{
+color: #F2F79E;
+}
+#law{
+        font-size: 35px;
+    }
+#but, #here, #use, #pass, #rem, #groth:hover{
+  color: #2978a0;
+}
+#but:hover{
+        background-color: #ffffff;
+        color: #0e79b2;
+    }
+#but{
+color: #f2f79e;
+background-color: black;
+}
+#lw{
+    line-height: 5px;
+    letter-spacing: 10px;
+    color: #2978;
+    font-weight: bold;
+  }
+  .nav-link{
+      color: #092327;
+  }
+  .groth{
+  color: #F2F79E;
+}
+#groth{
+  color: #F2F79E;
+}
+#law{
+          font-size: 35px;
+      }
+#but, #here, #use, #pass, #rem, #groth:hover{
+    color: #2978a0;
+  }
+  #but:hover{
+          background-color: #ffffff;
+          color: #0e79b2;
+      }
+#but{
+  color: #f2f79e;
+  background-color: black;
+}
+#key{
+  background-color:  #0e79b2;
+}
+.connect{
+      background-color: #2978a0;
+  }
+  .fetch{
+      background-color: #092327;
+  }
+  .vsit, .more{
+    text-decoration: none;
+    color: black;
+  }
+   .more:hover{
+    color: #2978a0;
+  }
+  .vsit:hover{
+    color: #2978a0;
+  }
+  .foot{
+    background-color:  #092327;
+  }
+  a{
+    text-decoration: none;
+  }
+  .update{
+    background-color: #F2F79E;
+    color: #092327;
+  }
+  .update:hover{
+    background-color: #092327;
+    color: #F2F79E;
+  }
+  .intgrp{
+    background-color: #092327;
+    color: #F2F79E;
+  }

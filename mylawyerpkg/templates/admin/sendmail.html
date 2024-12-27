@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Mail to Lawyers </title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/static/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/static/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/static/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<link rel="stylesheet" href="/static/signup.css">
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+                <nav class="navbar navbar-expand-lg fetch fixed-top">
+                    <div class="container-fluid">
+                      <h1 class="navbar-brand lw"><i class="fa-solid fa-scale-balanced"></i>  MYLAWYEr</h1>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">                      
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 py-5 my-5">
+            <h1>Send Email to Lawyers</h1>
+                    
+                    <form method="POST" action="/sendmail/" class="form-control">
+                        {{ appointmentform.csrf_token }}
+                        
+                        <div class=" py-2">
+                            <label for="full_name">Your Name:</label>
+                            {{ appointmentform.full_name }}
+                        </div>
+                        
+                        <div class=" py-2">
+                            <label for="email">Your Email:</label>
+                            {{ appointmentform.email }}
+                        </div>
+                        
+                        <div class=" py-2">
+                            <label for="message">Message:</label>
+                            {{ appointmentform.message }}
+                        </div>
+                        
+                        <div class="form-control py-2">
+                            <label for="lawyer_email">Select Lawyer:</label>
+                             <select class="form-control" name="lawyer_email" id="lawyer_email" required>
+                            <option value="">--Select a Lawyer--</option>
+                            {% for lawyer in lawyers %}
+                                <option value="{{ lawyer.lawyer_email }}">{{ lawyer.lawyer_fname }} ({{ lawyer.lawyer_email }})</option>
+                            {% endfor %}
+                             </select>
+                        </div>
+                        
+                        <div class="form-control py-2" >
+                            <button class="btn btn-danger" type="submit">Send Email</button>
+                        </div>
+                    </form>
+                    
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <ul>
+                                {% for category, message in messages %}
+                                    <li class="{{ category }}">{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Olajosh">
+  <meta name="robots" content="index, follow">
+  <title>Profile-Page Settings</title>
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="/static/fontawesome-free-6.6.0-web/css/all.css">
+  <link
+  rel="stylesheet"
+  href="/static/https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link rel="stylesheet" href="/static/profile_page_setting_page.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg fetch fixed-top">
+            <div class="container-fluid">
+              <h1 id="lw" class="navbar-brand">MY LAWYEr</h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"id="groth"><span class="badge rounded-pill text-bg-danger">50</span><i class="fa-solid fa-bell" ></i></a>
+                  </li>                                          
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="groth"><span class="badge rounded-pill text-bg-danger">99+</span><i class="fa-solid fa-inbox"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="groth"><i class="fa-solid fa-calendar-days"></i></i></a>
+                  </li>
+                </ul>                       
+              </div>
+            </div>
+          </nav>
+        <div class="row">
+            <div class="col-md">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 py-5 p-3 mt-3 align-items-center text-center flex-column d-flex">
+                <img src="/static/images/man-1948310_640 (1).jpg" class="img-thumbnail" alt="...">
+                <span class="text-center fw-bold">Cory Henry</spam>
+                <span class="text-center fw-bold">coryhenry@gmail.com</span>
+                <input type="file" class="d-none" id="profileimg" accept="image/*">
+                <label for="profileimg" class="btn update">Update Profile picture</label>
+            </div>
+            <div class="col-md-7 p-5 mt-3">
+                <h3 class="text-center">Profile settings </h3>
+                <form class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="First name" class="form-label">First name</label>
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Last name" class="form-label">Last name</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputEmail4" class="form-label">Phone</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                      </div><div class="col-md-12">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                      </div>
+                    <div class="col-md-12">
+                      <label for="inputPassword4" class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="inputPassword4">
+                            <span class="input-group-text intgrp"><i class="fa-solid fa-eye-slash"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label">Resistration Number</label>
+                      <input type="text" class="form-control" id="inputAddress">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">Address Line</label>
+                      <input type="text" class="form-control" id="inputAddress2">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputState" class="form-label">Province</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                    <div class="col-md-6">
+                      <label for="inputState" class="form-label">District</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div><div class="col-md-6">
+                        <label for="inputState" class="form-label">City</label>
+                        <select id="inputState" class="form-select">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="postalcode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="postalcode">
+                      </div>
+                    <div class="mb-3">
+                        <label for="validationTextarea" class="form-label">Update About Me</label>
+                        <textarea class="form-control" id="validationTextarea" required></textarea>
+                        <div class="invalid-feedback">
+                          Please enter a message in the textarea.
+                        </div>
+                      </div>                    
+                      <div class="mb-3">
+                        <select class="form-select" required aria-label="select example">
+                        <label for="gender" class="form-label">Gender</label>
+                          <option value="1">Male</option>
+                          <option value="2">Female</option>
+                          <option value="3">Others</option>
+                        </select>
+                        <div class="invalid-feedback">Example invalid select feedback</div>
+                      </div>
+                    
+                      <div class="mb-3">
+                        <label for="file" class="form-label">Upload Documents</label>
+                        <input type="file" class="form-control" aria-label="file example" required>
+                        <div class="invalid-feedback">Example invalid form file feedback</div>
+                      </div>
+                    <div class="d-grid gap-2">
+                      <button class="btn update" type="button">Update Profile</button>
+                    </div>
+                  </form>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        <div class="row p-5 foot">
+            <div class="col-md-6">
+              <h6 class="text-white">Connect with a Lawyer</h6>
+              <span class="text-white" style="font-weight: lighter;">My Lawyer is software application that is designed <br> for all users around the World, used by millions of <br> Lawyers and clients across the globe.</span> <br><br>  
+              <span class="text-white" style="font-weight: lighter;">built with <i class="fa-solid fa-heart"></i> and <i class="fa-solid fa-laptop"></i> in Lagos, Nigeria, West Afrcia.</span>
+              <p style="font-weight: lighter;" class="pt-2"><span><a href="">Lincense</a></span>
+                <span><a href="">Terms of Services</a></span>
+                <span><a href="">Privacy Policy</a></span>
+                <span><a href="">Cookies Preferences</a></span>
+                
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-4">
+                  <h6 class="text-white">FAQ</h6>
+                  <p class="text-white">Why Sign Up with us?</p>
+                  <p class="text-white">What do we do?</p>
+                  <a href=""><p class="text-white">Go further</p></a>
+                </div>
+                <div class="col-md-4">
+                  <h6 class="text-white">Community</h6>
+                 <a href=""> <p class="text-white">Twitter <i class="fa-brands fa-x-twitter"></i></p></a>
+                 <a href=""><p class="text-white">facebook <i class="fa-brands fa-facebook-f"></i></p></a> 
+                 <a href=""><p class="text-white">Tiktok <i class="fa-brands fa-tiktok"></i></p></a> 
+                 <a href=""><p class="text-white">LinkedIn <i class="fa-brands fa-linkedin"></i></p></a> 
+                </div>
+                <div class="col-md-4">
+                  <h6 class="text-white">Help</h6>
+                  <p class="text-white">Support</p>
+                  <p class="text-white">Contact Us</p>
+                  <p class="text-white">Newsletter</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div style="background-color:  #f2f79e; color: #092327;" class="row">
+            <div class="col">
+              <footer>
+                <p class="text-center mt-2">&copy MY LAWYEr, Inc</p>
+              </footer>
+            </div>
+          </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script></script>
+</body>
+</html>
